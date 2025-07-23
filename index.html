@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Nội Thất Q.Huy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Allura&family=Dancing+Script:wght@400..700&family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css">
+
+
+
+</head>
+
+<body>
+
+    <!-- Topbar -->
+    <div id="topbarNotice">
+        <span>Made in Korea - Nội thất gỗ cao cấp được chế tác hoàn toàn tại Hàn Quốc, chính thức ra mắt tại Việt
+            Nam.</span>
+        <button class="btn-close-white" onclick="closeTopbarNotice()">✕</button>
+    </div>
+
+    <!-- Navbar -->
+    <nav id="mainNavbar" class="navbar navbar-expand-lg">
+        <div class="container-fluid d-flex align-items-center justify-content-between">
+
+            <!-- Logo trái -->
+            <a href="#"><img src="image/ziatti_logo.svg" style="width: 110px; height: auto; cursor: pointer;"></a>
+
+
+            <!-- Button Mobile Toggle -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Mobile ICON TOP -->
+            <div class="d-lg-none w-100 text-end px-3 mt-2" style="display: flex; gap: 15px; ">
+                <a style="text-decoration: none; color: black;" href="https://ziatti.vn/member/login.html">LOGIN</a>
+                <a style="text-decoration: none; color: black;" href="https://ziatti.vn/order/basket.html">GIỎ HÀNG</a>
+                <a style="text-decoration: none; color: black;"
+                    href="https://ziatti.vn/member/login.html?returnUrl=/myshop/index.html&toMoveLoginCheckModule">MYPAGE</a>
+                <a style="color: black;" href="https://ziatti.vn/product/search.html"><i
+                        class="fa-solid fa-magnifying-glass"></i></a>
+            </div>
+
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav w-100 d-lg-none">
+                    <!-- Mobile Accordion Items -->
+                    <li class="nav-item border-bottom">
+                        <a class="nav-link d-flex justify-content-between align-items-center" data-bs-toggle="collapse"
+                            href="#submenu1" role="button">PHÒNG ĂN <span>+</span></a>
+                        <div class="collapse ps-3" id="submenu1">
+                            <a href="https://ziatti.vn/category/b%C3%A0n-%C4%83n-g%E1%BB%97/24/" class="nav-link">Bàn ăn
+                                gỗ</a>
+                            <a href="https://ziatti.vn/category/b%C3%A0n-%C4%83n-m%E1%BA%B7t-s%E1%BB%A9/25/"
+                                class="nav-link">Bàn ăn mặt sứ</a>
+                            <a href="https://ziatti.vn/category/gh%E1%BA%BF-g%E1%BB%97/27/" class="nav-link">Ghế gỗ</a>
+                            <a href="https://ziatti.vn/category/gh%E1%BA%BF-bench-g%E1%BB%97/48/" class="nav-link">Ghế
+                                bench gỗ</a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item border-bottom">
+                        <a class="nav-link d-flex justify-content-between align-items-center" data-bs-toggle="collapse"
+                            href="#submenu2" role="button">PHÒNG KHÁCH <span>+</span></a>
+                        <div class="collapse ps-3" id="submenu2">
+                            <a href="https://ziatti.vn/category/gh%E1%BA%BF-sofa/72/" class="nav-link">Ghế sofa</a>
+                            <a href="https://ziatti.vn/category/gi%C6%B0%E1%BB%9Dng-ng%E1%BB%A7/74/"
+                                class="nav-link">Giường ngủ</a>
+                            <a href="https://ziatti.vn/category/t%E1%BB%A7/75/" class="nav-link">Tủ</a>
+                            <a href="https://ziatti.vn/category/k%E1%BB%87/76/" class="nav-link">Kệ</a>
+                            <a href="https://ziatti.vn/category/b%C3%A0n-b%C3%AAn/77/" class="nav-link">Bàn bên</a>
+                            <a href="https://ziatti.vn/category/home-office/78/" class="nav-link">Home office</a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item border-bottom">
+                        <a class="nav-link d-flex justify-content-between align-items-center" data-bs-toggle="collapse"
+                            href="#submenu3" role="button">GIỚI THIỆU <span>+</span></a>
+                        <div class="collapse ps-3" id="submenu3">
+                            <a href="https://ziatti.vn/about/brand_story.html" class="nav-link">Chuyện ZIATTI</a>
+                            <a href="https://ziatti.vn/about/identity.html" class="nav-link">Bản sắc</a>
+                            <a href="https://ziatti.vn/about/sustainability.html" class="nav-link">Tính bền vững</a>
+                            <a href="https://ziatti.vn/zoodcare.html" class="nav-link">Zood care</a>
+                            <a href="https://ziatti.vn/cooperation.html" class="nav-link">Hợp tác</a>
+                            <a href="https://ziatti.vn/board/sponsorship/8/" class="nav-link">Sponsorship</a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item border-bottom">
+                        <a class="nav-link d-flex justify-content-between align-items-center" data-bs-toggle="collapse"
+                            href="#submenu4" role="button">CHẤT LIỆU <span>+</span></a>
+                        <div class="collapse ps-3" id="submenu4">
+                            <a href="https://ziatti.vn/ziatti_wood.html" class="nav-link">Gỗ</a>
+                            <a href="https://ziatti.vn/ziatti_ceramic.html" class="nav-link">Gốm sứ</a>
+                            <a href="https://ziatti.vn/ziatti_leather.html" class="nav-link">Da</a>
+                            <a href="https://ziatti.vn/ziatti_fabric.html" class="nav-link">Vải</a>
+                            <a href="https://ziatti.vn/finish.html" class="nav-link">Vật liệu hoàn thiện</a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item border-bottom">
+                        <a class="nav-link d-flex justify-content-between align-items-center" data-bs-toggle="collapse"
+                            href="#submenu5" role="button">SHOWROOM <span>+</span></a>
+                        <div class="collapse ps-3" id="submenu5">
+                    <a href="https://ziatti.vn/showroom_hcm.html" class="nav-link">Hồ Chí Minh</a>
+                    <a href="https://ziatti.vn/showroom_branch.html" class="nav-link">Hàn Quốc</a>
+            </div>
+            </li>
+
+            <li class="nav-item border-bottom">
+                <a class="nav-link d-flex justify-content-between align-items-center" data-bs-toggle="collapse"
+                    href="#submenu6" role="button">CỘNG ĐỒNG <span>+</span></a>
+                <div class="collapse ps-3" id="submenu6">
+            <a href="https://ziatti.vn/board/notice/1/" class="nav-link">Thông báo</a>
+            <a class="nav-link" href="https://ziatti.vn/board/h%E1%BB%8Fi-%C4%91%C3%A1p-v%E1%BB%81-s%E1%BA%A3n-ph%E1%BA%A9m/6/">Tư
+                    vấn</a>
+            <a href="https://zalo.me/3873768847336691276" class="nav-link">ZALO</a>
+            <a href="https://www.facebook.com/ziattivietnam/" class="nav-link">FACEBOOK</a>
+            <a href="https://www.instagram.com/ziatti_vietnam/" class="nav-link">INSTAGRAM</a>
+            <a href="https://ziatti.vn/board/gallery/blog.html" class="nav-link">BLOG</a>
+            <a href="https://www.youtube.com/@ziattivietnam" class="nav-link">YOUTUBE</a>
+        </div>
+        </li>
+
+        </ul>
+
+        <!-- Desktop Menu -->
+        <ul class="navbar-nav mx-auto d-none d-lg-flex">
+            <li class="nav-item"><a class="nav-link nav-hover-trigger" href="#">PHÒNG ĂN</a></li>
+            <li class="nav-item"><a class="nav-link nav-hover-trigger" href="#">PHÒNG KHÁCH</a></li>
+            <li class="nav-item"><a class="nav-link nav-hover-trigger" href="#">GIỚI THIỆU</a></li>
+            <li class="nav-item"><a class="nav-link nav-hover-trigger" href="#">CHẤT LIỆU</a></li>
+            <li class="nav-item"><a class="nav-link nav-hover-trigger" href="#">SHOWROOM</a></li>
+            <li class="nav-item"><a class="nav-link nav-hover-trigger" href="#">CỘNG ĐỒNG</a></li>
+        </ul>
+        </div>
+
+
+
+        <!-- MegaMenu (dùng chung) -->
+        <div id="megaMenu" class="megamenu shadow">
+            <div class="container py-4">
+                <div class="row">
+                    <div class="col-md-2">
+                        <ul class="list-unstyled">
+                            <li><a href="https://ziatti.vn/category/b%C3%A0n-%C4%83n-g%E1%BB%97/24/">Bàn ăn gỗ</a>
+                            </li>
+                            <li><a href="https://ziatti.vn/category/b%C3%A0n-%C4%83n-m%E1%BA%B7t-s%E1%BB%A9/25/">Bàn
+                                    ăn mặt sứ</a></li>
+                            <li><a href="https://ziatti.vn/category/gh%E1%BA%BF-g%E1%BB%97/27/">Ghế gỗ</a></li>
+                            <li><a href="https://ziatti.vn/category/gh%E1%BA%BF-bench-g%E1%BB%97/48/">Ghế bench
+                                    gỗ</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2">
+                        <ul class="list-unstyled">
+                            <li><a href="https://ziatti.vn/category/gh%E1%BA%BF-sofa/72/">Ghế sofa</a></li>
+                            <li><a href="https://ziatti.vn/category/gi%C6%B0%E1%BB%9Dng-ng%E1%BB%A7/74/">Giường
+                                    ngủ</a></li>
+                            <li><a href="https://ziatti.vn/category/t%E1%BB%A7/75/">Tủ</a></li>
+                            <li><a href="https://ziatti.vn/category/k%E1%BB%87/76/">Kệ</a></li>
+                            <li><a href="https://ziatti.vn/category/b%C3%A0n-b%C3%AAn/77/">Bàn bên</a></li>
+                            <li><a href="https://ziatti.vn/category/home-office/78/">Home office</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2">
+                        <ul class="list-unstyled">
+                            <li><a href="https://ziatti.vn/about/brand_story.html">Chuyện ZIATTI</a></li>
+                            <li><a href="https://ziatti.vn/about/identity.html">Bản sắc</a></li>
+                            <li><a href="https://ziatti.vn/about/sustainability.html">Tính bền vững</a></li>
+                            <li><a href="https://ziatti.vn/zoodcare.html">Zood care</a></li>
+                            <li><a href="https://ziatti.vn/cooperation.html">Hợp tác</a></li>
+                            <li><a href="https://ziatti.vn/board/sponsorship/8/">Sponsorship</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2">
+                        <ul class="list-unstyled">
+                            <li><a href="https://ziatti.vn/ziatti_wood.html">Gỗ</a></li>
+                            <li><a href="https://ziatti.vn/ziatti_ceramic.html">Gốm sứ</a></li>
+                            <li><a href="https://ziatti.vn/ziatti_leather.html">Da</a></li>
+                            <li><a href="https://ziatti.vn/ziatti_fabric.html">Vải</a></li>
+                            <li><a href="https://ziatti.vn/finish.html">Vật liệu hoàn thiện</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2">
+                        <ul class="list-unstyled">
+                            <li><a href="https://ziatti.vn/showroom_hcm.html">Hồ Chí Minh</a></li>
+                            <li><a href="https://ziatti.vn/showroom_branch.html">Hàn Quốc</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2">
+                        <ul class="list-unstyled">
+                            <li><a href="https://ziatti.vn/board/notice/1/">Thông báo</a></li>
+                            <li><a
+                                    href="https://ziatti.vn/board/h%E1%BB%8Fi-%C4%91%C3%A1p-v%E1%BB%81-s%E1%BA%A3n-ph%E1%BA%A9m/6/">Tư
+                                    vấn</a></li>
+                            <li><a href="https://zalo.me/3873768847336691276">ZALO</a></li>
+                            <li><a href="https://www.facebook.com/ziattivietnam/">FACEBOOK</a></li>
+                            <li><a href="https://www.instagram.com/ziatti_vietnam/">INSTAGRAM</a></li>
+                            <li><a href="https://ziatti.vn/board/gallery/blog.html">BLOG</a></li>
+                            <li><a href="https://www.youtube.com/@ziattivietnam">YOUTUBE</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Icon phải -->
+        <ul class="navbar-nav ms-auto d-none d-lg-flex">
+            <li class="nav-item"><a class="nav-link" href="https://ziatti.vn/member/login.html">LOGIN</a></li>
+            <li class="nav-item"><a class="nav-link" href="https://ziatti.vn/order/basket.html">GIỎ HÀNG</a></li>
+            <li class="nav-item"><a class="nav-link"
+                    href="https://ziatti.vn/member/login.html?returnUrl=/myshop/index.html&toMoveLoginCheckModule">MYPAGE</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="https://ziatti.vn/product/search.html"><i
+                        class="fa-solid fa-magnifying-glass"></i></i></a>
+            </li>
+        </ul>
+
+        </div>
+    </nav>
+
+
+    <!--------------------------------------- Nội dung Slide--------------------------------------->
+    <section class="hero-slider">
+        <div class="hero-slide" style="background-image: url('image/muee_pc.webp');">
+            <div class="hero-caption">
+                <h1>BOW WOW!</h1>
+                <p>Simple yet Powerful</p>
+            </div>
+        </div>
+        <div class="hero-slide" style="background-image: url('image/manero_pc.webp');">
+            <div class="hero-caption">
+                <h1>SANG TRỌNG</h1>
+                <p>Thiết kế đẳng cấp Hàn Quốc</p>
+            </div>
+        </div>
+        <div class="hero-slide" style="background-image: url('image/lilly_pc.webp');">
+            <div class="hero-caption">
+                <h1>CHẤT GỖ ĐỈNH CAO</h1>
+                <p>Được sản xuất tại Hàn Quốc</p>
+            </div>
+        </div>
+        <div class="hero-slide" style="background-image: url('image/laon_pc.webp');">
+            <div class="hero-caption">
+                <h1>CHẤT GỖ ĐỈNH CAO</h1>
+                <p>Được sản xuất tại Hàn Quốc</p>
+            </div>
+        </div>
+        <div class="hero-slide" style="background-image: url('image/brill_pc.webp');">
+            <div class="hero-caption">
+                <h1>CHẤT GỖ ĐỈNH CAO</h1>
+                <p>Được sản xuất tại Hàn Quốc</p>
+            </div>
+        </div>
+        <div class="hero-slide" style="background-image: url('image/atti_pc.webp');">
+            <div class="hero-caption">
+                <h1>CHẤT GỖ ĐỈNH CAO</h1>
+                <p>Được sản xuất tại Hàn Quốc</p>
+            </div>
+        </div>
+    </section>
+
+    <!--------------------------------------- Giới Thiệu ------------------------------------- -->
+    <section class="section-gioithieu">
+        <div class="gioithieu">
+            <div class="tieude">
+                <h1>Chúng tôi nỗ lực chỉ sử dụng những gì thiên nhiên ban tặng.</h1>
+            </div>
+            <div class="mota">
+                <p>Hành trình dài và đầy màu sắc của chúng tôi đến với cây cối bắt đầu từ sự tôn trọng sâu sắc dành cho
+                    thiên nhiên. <br>
+                    Dựa trên các sản phẩm có thể lưu giữ qua nhiều thế hệ và giải pháp sản xuất bền vững,<br>
+                    chúng tôi muốn cùng bạn trò chuyện về khả năng vô hạn của gỗ.</p>
+            </div>
+
+            <a href="https://ziatti.vn/about/sustainability.html" style="text-decoration: none;"
+                class="tinhbenvung">Tính bền vững</a>
+        </div>
+    </section>
+
+
+
+    <!--------------------------------------- Danh sach san pham --------------------------------------->
+    <section class="danhsachsanpham">
+        <div class="container-fluid h-100">
+            <div class="row h-100 g-3">
+                <!-- Cột trái -->
+                <a href="https://ziatti.vn/category/%ED%8F%AC%EC%84%B8%EB%A6%B0%EC%8B%9D%ED%83%81/25/"
+                    class="col-md-6 d-flex align-items-center justify-content-center position-relative">
+                    <div class="image-box">
+                        <img src="image/porcelain.webp" alt="" class="img-fluid h-100 w-100 object-fit-cover">
+                        <div class="text-overlay top-left">PORCELAIN TABLE</div>
+                    </div>
+                </a>
+
+                <!-- Cột phải -->
+                <div class="col-md-6 d-flex flex-column justify-content-between">
+                    <!-- Ảnh trên -->
+                    <a href="https://ziatti.vn/category/%EC%9B%90%EB%AA%A9%EC%8B%9D%ED%83%81/24/"
+                        class="mb-3 position-relative">
+                        <div class="image-box">
+                            <img src="image/wood_T.webp" alt="" class="img-fluid w-100 h-100 object-fit-cover">
+                            <div class="text-overlay bottom-right">WOOD TABLE</div>
+                        </div>
+                    </a>
+
+                    <!-- 2 ảnh dưới -->
+                    <div class="row g-3">
+                        <a href="https://ziatti.vn/category/%EC%B2%B4%EC%96%B4/27/" class="col-6 position-relative">
+                            <div class="image-box">
+                                <img src="image/chair.webp" alt="" class="img-fluid w-100 h-100 object-fit-cover">
+                                <div class="text-overlay top-left">CHAIR</div>
+                            </div>
+                        </a>
+                        <a href="https://ziatti.vn/category/%EB%B2%A4%EC%B9%98/48/" class="col-6 position-relative">
+                            <div class="image-box">
+                                <img src="image/bench.webp" alt="" class="img-fluid w-100 h-100 object-fit-cover">
+                                <div class="text-overlay bottom-right">BENCH</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--------------------------------------- Animation Gioi Thieu --------------------------------------->
+    <section class="image-expand-section" style="padding-top: 300px;">
+        <div class="image-wrapper">
+            <div class="image-bg" data-aos="zoom-in" data-aos-delay="400">
+                <div class="overlay-text">
+                    <h2 data-aos="fade-up" data-aos-delay="700">Vẻ đẹp bền vững</h2>
+                    <p style="opacity: 0.8;" data-aos="fade-up" data-aos-delay="800">Sustainable Aesthetics</p>
+                    <p data-aos="fade-up" data-aos-delay="900">Đồ nội thất của chúng tôi, được sinh ra từ sự hài hòa của
+                        thủ công mỹ nghệ và sự đổi mới, hiện
+                        diện như một tác phẩm nghệ thuật. <br>
+                        Đó là hy vọng chân thành của chúng tôi, rằng sẽ truyền cảm hứng đến cuộc sống của nhiều người
+                        hơn.</p>
+                    <a href="https://ziatti.vn/about/brand_story.html" class="btn-cauchuyenthuonghieu"
+                        data-aos="fade-up" data-aos-delay="1000">Câu chuyện thương
+                        hiệu</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!--------------------------- Z-Object --------------------------------------->
+    <section class="z-objet" style="padding-top: 100px; padding-bottom: 100px;">
+        <div class="container" style="padding-bottom: 50px;">
+            <h1>Z-Objet</h1>
+            <div class="tieude-2">
+                <p>Đúng kiểu Ziatti</p>
+                <a href="https://ziatti.vn/category/z-objet/73/">Tìm hiểu thêm</a>
+            </div>
+
+
+        </div>
+        <div class="grid">
+            <a href="https://ziatti.vn/product/k%E1%BB%87-tula/449/category/73/display/1/" class="item">
+                <img src="image/zobjet01.webp" alt="z1">
+                <div class="caption">
+                    <h2>TULA SHELVING</h2>
+                </div>
+            </a>
+            <a href="https://ziatti.vn/product/xe-%C4%91%E1%BA%A9y-ollo-g%E1%BB%97-s%E1%BB%93i-tr%E1%BA%AFng/434/category/73/display/1/"
+                class="item">
+                <img src="image/zobjet02.webp" alt="z2">
+                <div class="caption">
+                    <h2>OLLO TROLLEY</h2>
+                </div>
+            </a>
+            <a href="https://ziatti.vn/product/b%C3%A0n-l%C3%A0m-vi%E1%BB%87c-mondo-g%E1%BB%97-%C3%B3c-ch%C3%B3-g%E1%BB%97-s%E1%BB%93i-tr%E1%BA%AFng/447/category/73/display/1/"
+                class="item">
+                <img src="image/zobjet03.webp" alt="z3">
+                <div class="caption">
+                    <h2>MONDO DESK</h2>
+                </div>
+            </a>
+            <a href="https://ziatti.vn/product/t%E1%BB%A7-console-daisy-g%E1%BB%97-%C3%B3c-ch%C3%B3-g%E1%BB%97-s%E1%BB%93i-tr%E1%BA%AFng/443/category/73/display/1/"
+                class="item">
+                <img src="image/zobjet04.webp" alt="z4">
+                <div class="caption">
+                    <h2>VENT CONSOLE</h2>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!---------------------------BLOG--------------------------------------->
+    <section class="section-blog-alt py-5">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <!-- Cột trái -->
+                <div class="col-md-2 blog-intro" style="padding-bottom: 20px;">
+                    <h2 class="mb-3">BLOG</h2>
+                    <p>Kỷ lục của Ziatti</p>
+                    <a href="https://ziatti.vn/board/gallery/blog.html">Chuyển hướng đến Blog</a>
+                </div>
+
+                <!-- Cột phải -->
+                <div class="col-md-10">
+                    <div class="blog-carousel-alt">
+                        <!-- Slide 1 -->
+                        <a href="https://ziatti.vn/article/blog/12/29519/" class="item-1 text-center px-2">
+                            <img src="image/thumb001.jpg" alt="Chair" class="img-fluid mb-2 rounded">
+                            <h6>Bàn ăn cho 6 người có phù hợp cho nhà 65m²?</h6>
+                            <p>Khi mua bàn ăn, kiểu dáng cũng quan trọng, nhưng thực tế điều khiến nhiều người phân vân
+                                nhất lại chính là kích thước. Chỉ một chút chênh lệch cũng có</p>
+                        </a>
+                        <!-- Slide 2 -->
+                        <a href="https://ziatti.vn/article/blog/12/29523/" class="item-1 text-center px-2">
+                            <img src="image/thumb002.jpg" alt="Bench" class="img-fluid mb-2 rounded">
+                            <h6>Flow Sofa – vẻ đẹp từ thiết kế không tay vịn</h6>
+                            <p>
+                                Mô-đun tựa như hạt muối của Flow Sofa Flow Sofa – chiếc sofa đầu tiên của Ziatti – được
+                                thiết kế để bạn có thể tự do lựa chọn từng mô-đun theo nhu cầu.</p>
+                        </a>
+                        <!-- Slide 3 -->
+                        <a href="https://ziatti.vn/article/blog/12/29515/" class="item-1 text-center px-2">
+                            <img src="image/thumb003.jpg" alt="Wood Table" class="img-fluid mb-2 rounded">
+                            <h6>Giờ đây đã trở thành bạn đồng hành trong việc nuôi dạy con cái</h6>
+                            <p>
+                                Câu chuyện về chiếc bàn ăn của khách hàng sống tại Dongjak, Seoul Từ vợ chồng mới cưới
+                                sử dụng bàn ăn 2 người Giờ đây đã trở thành bạn đồng hành</p>
+                        </a>
+                        <!-- Slide 4 -->
+                        <a href="https://ziatti.vn/article/blog/12/29514/" class="item-1 text-center px-2">
+                            <img src="image/thumb004.jpg" alt="Wood Table" class="img-fluid mb-2 rounded">
+                            <h6>TULA - chiếc ghế đến từ Mid Century</h6>
+                            <p>Màu sắc tươi sáng đặc trưng từ nhựa, ánh bạc liên tưởng đến tay vịn của tàu điện ngầm,
+                                cho đến những hình dạng hình học của thuỷ tinh khiến ta nghĩ đến phò</p>
+                        </a>
+                        <!-- Slide 5 -->
+                        <a href="https://ziatti.vn/article/blog/12/29517/" class="item-1 text-center px-2">
+                            <img src="image/thumb005.jpg" alt="Wood Table" class="img-fluid mb-2 rounded">
+                            <h6>OLLO – sự nâng tầm cho một chiếc kệ đẩy</h6>
+                            <p>
+                                Chiếc ‘trolley’ có thể lưu trữ đồ đạc mà không chiếm quá nhiều không gian, và còn có thể
+                                di chuyển được. Từ 'trolley' ban đầu có nghĩa là 'xe đẩy' hoặc 'xe ké</p>
+                        </a>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!---------------------------VIDEO SHORT--------------------------------------->
+    <section>
+        <div class="container video-short">
+            <div class="row text-center py-5">
+                <h1>Bây giờ, ZIATTI <img class="icon" src="image/Youtube_shorts_icon.svg.png" alt=""></h1>
+                <p style="opacity: 0.8;">Phỏng vấn đánh giá chân thật</p>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="video-card text-center">
+                        <div class="video-thumbnail position-relative" onclick="openVideoPopup()">
+                            <img src="image/shorts_manero_re.webp" alt="Video Thumbnail" class="img-fluid">
+                            <div class="play-button">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                        <blockquote class="video-quote mt-3">
+                            "Tôi thấy, đây là chiếc bàn đẹp nhất. Tất cả đều hài hoà với…"
+                        </blockquote>
+                        <p class="video-caption text-uppercase">MANERO TWIN PORCELAIN TABLE – WALNUT</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="video-card text-center">
+                        <div class="video-thumbnail position-relative" onclick="openVideoPopup()">
+                            <img src="image/shorts_02.webp" alt="Video Thumbnail" class="img-fluid">
+                            <div class="play-button">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                        <blockquote class="video-quote mt-3">
+                            "Tôi muốn nó đơn giản nhất và thanh thoát, không nặng nề..."
+                        </blockquote>
+                        <p class="video-caption text-uppercase">CHELSEA CIRCLE PORCELAIN TABLE - WALNUT</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="video-card text-center">
+                        <div class="video-thumbnail position-relative" onclick="openVideoPopup()">
+                            <img src="image/shorts_13.webp" alt="Video Thumbnail" class="img-fluid">
+                            <div class="play-button">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                        <blockquote class="video-quote mt-3">
+                            "Tôi thấy, đây là chiếc bàn đẹp nhất. Tất cả đều hài hoà với…"
+                        </blockquote>
+                        <p class="video-caption text-uppercase">MUEE PORCELAIN TABLE - OAK</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="video-card text-center">
+                        <div class="video-thumbnail position-relative" onclick="openVideoPopup()">
+                            <img src="image/shorts_lily_re.webp" alt="Video Thumbnail" class="img-fluid">
+                            <div class="play-button">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                        <blockquote class="video-quote mt-3">
+                            "Còn mặt bàn này thì chắc chắn, lại còn dễ tẩy xoá nữa…"
+                        </blockquote>
+                        <p class="video-caption text-uppercase">LILY PORCELAIN TABLE - WALNUT</p>
+                    </div>
+                </div>
+
+
+            </div>
+            <div id="videoPopup" class="video-popup">
+                <div class="video-popup-content">
+                    <span class="video-close" onclick="closeVideoPopup()">✕</span>
+                    <iframe id="popupVideo" width="100%" height="100%" src="" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!---------------------------HỢP TÁC--------------------------------------->
+    <section class="hoptac">
+        <div class="row text-center py-5">
+            <h1>Hợp tác</h1>
+            <p style="opacity: 0.8;">Thông qua các dự án hợp tác với nhiều công ty trong và ngoài nước,<br>
+                Bạn có thể kiểm tra công nghệ và ý tưởng độc đáo của Ziatti đã được trau dồi trong một thời gian dài.
+            </p>
+        </div>
+        <div class="container hoptac-icon">
+            <ul class="hoptac-item">
+                <li><a href="https://ziatti.vn/lilsquare.html"><img src="image/logo.png" alt="Logo 1"></a></li>
+                <li><a href="https://ziatti.vn/coop_ilhada.html"><img src="image/il_logo.png" alt="Logo 2"></a></li>
+                <li><a href="#"><img src="/image/kk_logo.webp" alt="Logo 3"></a></li>
+                <li><a href="#"><img src="image/kt_logo.png" alt="Logo 4"></a></li>
+                <li><a href="#"><img src="image/my_logo.webp" alt="Logo 5"></a></li>
+                <li><a href="https://ziatti.vn/signiel.html"><img src="image/lt_logo.webp" alt="Logo 6"></a></li>
+                <li><a href="https://ziatti.vn/bdf2025.html"><img src="image/bdf_logo.png" alt="Logo 7"></a></li>
+                <li><a href="#"><img src="image/cha_logo.png" alt="Logo 8"></a></li>
+                <li><a href="https://ziatti.vn/hankook.html"><img src="image/han_logo.png" alt="Logo 9"></a></li>
+                <li><a href="https://ziatti.vn/lmh.html"><img src="image/mer_logo.png" alt="Logo 10"></a></li>
+                <li><a href="https://ziatti.vn/shinsegae.html"><img src="image/ssg_logo.webp" alt="Logo 11"></a></li>
+                <li><a href="https://ziatti.vn/fstfive.html"><img src="image/fast_logo.png" alt="Logo 12"></a></li>
+                <li><a href="#"><img src="image/hometable_logo2.png" alt="Logo 13"></a></li>
+                <li><a href="https://ziatti.vn/inha.html"><img src="image/inha_logo.png" alt="Logo 14"></a></li>
+                <li><a href="https://ziatti.vn/josun_palace_r.html"><img src="image/palace_logo.png" alt="Logo 15"></a>
+                </li>
+                <li><a href="#"><img src="image/thehd_logo.png" alt="Logo 16"></a></li>
+                <li><a href="https://ziatti.vn/demer.html"><img src="image/demer_logo.png" alt="Logo 17"></a></li>
+                <li><a href="https://ziatti.vn/josun_busan.html"><img src="image/busan_logo.png" alt="Logo 18"></a></li>
+                <li><a href="https://ziatti.vn/sldf2025.html"><img src="image/sldf_logo1.png" alt="Logo 19"></a></li>
+                <li><a href="https://ziatti.vn/josun_jeju_r.html"><img src="image/jeju_logo.png" alt="Logo 20"></a></li>
+            </ul>
+        </div>
+    </section>
+
+
+
+
+    <!---------------------------INSTAGRAM--------------------------------------->
+    <section>
+        <div class="main text-center" style="padding-top: 20%; height: 100vh;">
+            <h1>Instagram</h1>
+            <p style="opacity: 0.8;">Completion of Lifestyle, ZIATTI</p>
+        </div>
+    </section>
+
+
+
+    <!---------------------------FOOTER--------------------------------------->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-lg-4 mb-4 mb-md-0 footer-content-left">
+                    <img src="image/footer_logo.png" alt="Logo" class="footer-logo">
+                    <br><br>
+                    <strong>COMPANY</strong> (주)지아뜨
+                    <br>
+                    <strong>ADDRESS</strong> Số 5 Lý Tự Trọng, Phường Bến Nghé, Quận 1, Thành phố Hồ Chí Minh
+                    <br>
+                    <strong>FACTORY ADDRESS</strong> 28663 인천 서구 검단천로114번길 17 (주)지아뜨
+                    <br>
+                    <strong>ORDER LICENCE.</strong> 제2021-인천서구-2407
+                    <br>
+                    <strong>OWNER</strong> 전치홍
+                    <br>
+                    <strong>C.P.O</strong> 한선영
+                    <br>
+                    <strong>BUSINESS LICENCE</strong> 245-81-02240 (Thông tin doanh nghiệp)
+                    <br>
+                    <strong>TEL</strong> 0262711120
+                    <br>
+                    <strong>E-MAIL</strong> ziatt@naver.com
+                </div>
+
+                <div class="col-md-6 col-lg-8">
+                    <div class="row">
+                        <div class="col-6 col-lg-3 mb-4 mb-md-0 footer-col-spacing">
+                            <div class="footer-heading">CONTACT</div>
+                            <ul class="footer-list">
+                                <li><a href="#">Tư vấn</a></li>
+                                <li><a href="#">Zalo Showroom</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="col-6 col-lg-3 mb-4 mb-md-0 footer-col-spacing">
+                            <div class="footer-heading">LEGAL</div>
+                            <ul class="footer-list">
+                                <li><a href="#">Điều khoản sử dụng</a></li>
+                                <li><a href="#">Chính sách bảo mật</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="col-12 col-lg-6 footer-col-spacing">
+                            <div class="footer-heading">FOLLOW US</div>
+                            <div class="social-icons" style="text-decoration: none;">
+                                <a class="social-icon-wrapper" href="https://blog.naver.com/ziatti"><i
+                                        class="fa-brands fa-facebook"></i></a>
+                                <a href="https://www.messenger.com/login.php?next=https%3A%2F%2Fwww.messenger.com%2Ft%2F411393208718567%2F%3Fmessaging_source%3Dsource%253Apages%253Amessage_shortlink%26source_id%3D1441792%26recurring_notification%3D0"
+                                    class="social-icon-wrapper"><i class="fa-brands fa-facebook-messenger"></i></a>
+                                <a href="https://www.youtube.com/@ziattivietnam" class="social-icon-wrapper"><i
+                                        class="fa-brands fa-youtube"></i></a>
+                                <a href="https://www.instagram.com/ziatti_vietnam/" class="social-icon-wrapper"><i
+                                        class="fa-brands fa-instagram"></i></a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12 text-justify footer-bottom-text">
+                        Để đảm bảo giao dịch an toàn, Khách hàng có thể sử dụng dịch vụ an toàn mua hàng đã đăng ký tại
+                        trung tâm mua sắm của chúng tôi khi thanh toán.
+                        <br>
+                        <strong>COPYRIGHT © ZIATT INDUSTRY INC. ALL RIGHTS RESERVED.</strong>
+                    </div>
+                </div>
+            </div>
+    </footer>
+
+
+
+
+    <!-- Lien He -->
+    <div class="lien-he">
+        <div class="icon-lienhe">
+            <a href="https://zalo.me/3873768847336691276"><img src="image/Icon_of_Zalo.svg.png" alt=""></a>
+            <a
+                href="https://www.messenger.com/login.php?next=https%3A%2F%2Fwww.messenger.com%2Ft%2F411393208718567%2F%3Fmessaging_source%3Dsource%253Apages%253Amessage_shortlink%26source_id%3D1441792%26recurring_notification%3D0"><img
+                    src="image/Facebook_Messenger_logo_2020.svg.webp" alt=""></a>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- Script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="js/index.js"></script>
+
+
+</body>
+
+</html>

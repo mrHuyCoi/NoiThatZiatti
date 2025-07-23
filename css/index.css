@@ -1,0 +1,927 @@
+html,
+body {
+    height: 100%;
+    font-family: "Winky Rough", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+
+
+/* -------------------------------------Topbar------------------------------------- */
+#topbarNotice {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 40px;
+    background: #333;
+    color: #fff;
+    z-index: 1050;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem;
+    font-size: 13px;
+}
+
+#topbarNotice .btn-close-white {
+    position: absolute;
+    right: 0;
+}
+
+.btn-close-white {
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+}
+
+/*------------------------------------- Navbar -------------------------------------*/
+
+.navbar-nav .nav-link {
+  font-size: 16px;
+  color: #222;
+}
+
+.toggle-icon {
+  font-size: 18px;
+}
+
+.collapse {
+  transition: height 0.3s ease;
+}
+
+@media (max-width: 991.98px) {
+  .navbar-nav .collapse .nav-link {
+    font-size: 15px;
+    padding-left: 1.25rem;
+  }
+}
+
+/* Giảm padding + fix icon mobile */
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler-icon {
+  width: 25px;
+  height: 25px;
+}
+
+
+
+
+#mainNavbar {
+    position: fixed;
+    top: 40px;
+    left: 0;
+    right: 0;
+    z-index: 1040;
+    background: white;
+    transition: top 0.3s ease;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 14px;
+}
+
+.content {
+    padding-top: 112px;
+}
+
+#navbarNav ul li {
+    padding-right: 30px;
+    padding-left: 30px;
+}
+
+#megaMenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: white;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    z-index: 999;
+    pointer-events: none;
+}
+
+#megaMenu.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+
+.megamenu {
+    font-size: 13px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: white;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    z-index: 999;
+    border-top: 1px solid #ddd;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+
+.megamenu .row>div {
+    padding-left: 5px;
+    padding-right: 5px;
+    min-width: 0;
+}
+
+.megamenu ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.megamenu a {
+    color: #333;
+    text-decoration: none;
+    display: block;
+    padding: 4px 0;
+}
+
+
+.nav-item:hover .megamenu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+
+
+.megamenu a:hover {
+    color: rgb(212, 212, 136);
+}
+
+
+/* ----------SLIDE--------------- */
+.hero-slider {
+    width: 100%;
+    height: 100vh;
+    min-height: 100vh;
+    display: flex;
+    overflow: hidden;
+}
+
+.hero-slide {
+    height: 100vh;
+    min-height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+}
+
+.hero-caption h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.hero-caption p {
+    font-size: 1.5rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+
+/* ------------------- Giới thiệu ------------------------*/
+.section-gioithieu {
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+
+.gioithieu {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+}
+
+.tieude {
+    padding-bottom: 20px;
+}
+
+.mota {
+    padding-bottom: 20px;
+    opacity: 0.8;
+}
+
+.tinhbenvung {
+    border: 1px solid rgb(41, 41, 41);
+    display: inline-block;
+    padding: 10px 30px 10px 30px;
+    cursor: pointer;
+    color: #000;
+}
+
+.tinhbenvung:hover {
+    border: 1px solid rgb(255, 255, 255);
+    background-color: rgb(54, 54, 54);
+    color: #ffffff;
+    transition: 0.5s;
+}
+
+/* Danh sach san pham */
+.danhsachsanpham {
+    height: 100vh;
+    width: 100%;
+    padding: 20px;
+}
+
+.object-fit-cover {
+    object-fit: cover;
+    width: 100%;
+}
+
+.image-box {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    overflow: hidden; /* Ngăn ảnh tràn ra ngoài khi phóng to */
+}
+
+.image-box img {
+    transition: transform 0.6s ease;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-box:hover img {
+    transform: scale(1.05); /* Chỉ ảnh phóng to */
+}
+
+.text-overlay {
+    position: absolute;
+    color: white;
+    font-size: 50px;
+    font-weight: 300;
+    z-index: 2;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.image-box:hover {
+    transform: scale(1.02);
+    transition: transform 0.6s ease;
+}
+
+/* Vị trí chữ */
+.top-left {
+    top: 20px;
+    left: 20px;
+}
+
+.bottom-right {
+    bottom: 20px;
+    right: 20px;
+}
+
+
+/*------------------------- Animation Gioi thieu ----------------*/
+.image-expand-section {
+    display: flex;
+    justify-content: center;
+    padding: 60px 0;
+}
+
+.image-wrapper {
+    width: 100%;
+    height: 80%;
+    transition: width 1.2s ease;
+    position: relative;
+}
+
+.image-wrapper.expanded {
+    width: 100%;
+}
+
+.image-bg {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4)),
+        url("../image/story_01.webp") center / cover no-repeat;
+}
+
+.overlay-text {
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    top: 40%;
+}
+
+.btn-cauchuyenthuonghieu {
+    text-decoration: none;
+    padding: 10px 30px;
+    border: 1px solid #fff;
+    font-size: 13px;
+    background-color: transparent;
+    color: #fff;
+}
+
+.btn-cauchuyenthuonghieu:hover {
+    border: 1px solid #afa8ef;
+    color: #afa8ef;
+    transition: 0.3s !important;
+}
+
+/* ------------------------- */
+/* HOVER IMG */
+.tieude-2 {
+    position: relative;
+    display: flex;
+    opacity: 0.8;
+}
+
+.tieude-2 a {
+    text-decoration: none;
+    color: #0d2211;
+    display: inline-block;
+    text-align: end;
+    position: absolute;
+    right: 0;
+    border: 1px solid rgb(171, 157, 157);
+    padding: 5px 15px;
+    background-color: transparent;
+}
+
+.tieude-2 a:hover {
+    border: 1px solid rgb(0, 0, 0);
+    color: #000000;
+    background-color: transparent;
+}
+
+.grid {
+    display: flex;
+    height: 60vh;
+    overflow: hidden;
+}
+
+.item {
+    flex: 1;
+    position: relative;
+    transition: flex 0.8s ease;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s ease, filter 0.8s ease;
+    filter: brightness(0.6);
+}
+
+.caption {
+    position: absolute;
+    bottom: 0;
+    left: 30%;
+    width: 80%;
+    transform-origin: left;
+    color: white;
+    text-align: left;
+}
+
+.caption h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.item.active {
+    flex: 3;
+}
+
+.item.active img {
+    transform: scaleX(1.2);
+    /* Zoom theo chiều ngang */
+    filter: brightness(1);
+}
+
+
+
+/* ------------------------- */
+.section-blog-alt {
+    background-color: #f8f9fa;
+}
+
+.blog-intro h2 {
+    font-weight: bold;
+}
+
+.blog-intro {
+    padding-left: 30px;
+}
+
+.blog-intro a {
+    text-decoration: none;
+    color: #432020;
+    padding: 5px 20px;
+    border: 1px solid black;
+    background: transparent;
+}
+    
+.blog-intro a:hover {
+    border: 1px solid #fff;
+    color: #fff;
+    background-color: #312f2f;
+}
+
+.blog-carousel-alt a{
+    text-decoration: none;
+    color: black;
+}
+
+.blog-carousel-alt .item-1 img {
+    height: 500px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.blog-carousel-alt .item-1 h6 {
+    text-align: left;
+}
+
+.blog-carousel-alt .item-1 p {
+    opacity: 0.7;
+    text-align: justify;
+    font-size: 13px;
+}
+
+.blog-carousel-alt {
+    position: relative;
+    padding-bottom: 70px;
+}
+
+.blog-carousel-alt .slick-prev,
+.blog-carousel-alt .slick-next {
+    position: absolute;
+    bottom: 10px;
+    top: auto;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: white;
+    border: 1px solid #ccc;
+    color: black;
+    opacity: 0.9;
+    transition: 0.3s ease;
+    z-index: 5;
+}
+
+.blog-carousel-alt .slick-prev:hover,
+.blog-carousel-alt .slick-next:hover {
+    background: black;
+    color: white;
+    border-color: black;
+}
+
+.blog-carousel-alt .slick-prev {
+    left: 50%;
+    transform: translateX(-55px);
+}
+
+.blog-carousel-alt .slick-next {
+    left: 50%;
+    transform: translateX(15px);
+}
+
+.blog-carousel-alt .slick-prev.slick-disabled,
+.blog-carousel-alt .slick-next.slick-disabled {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.slick-prev::before,
+.slick-next::before {
+    content: '';
+    display: none;
+}
+
+.slick-prev,
+.slick-next {
+    font-size: 0;
+}
+
+.slick-prev,
+.slick-next {
+    position: absolute;
+    bottom: 10px;
+    top: auto;
+    width: 40px;
+    height: 40px;
+    background: white;
+    color: black;
+    font-size: 20px;
+    line-height: 1;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    z-index: 5;
+    transition: 0.3s ease;
+}
+
+.slick-prev:hover,
+.slick-next:hover {
+    background: black;
+    color: white;
+}
+
+.slick-prev {
+    left: 50%;
+    transform: translateX(-55px);
+}
+
+.slick-next {
+    left: 50%;
+    transform: translateX(15px);
+}
+
+.slick-prev.slick-disabled,
+.slick-next.slick-disabled {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* -----------Video short--------- */
+
+.video-short .icon {
+    width: 30px;
+    height: auto;
+}
+
+.video-card {
+    max-width: 400px;
+    margin: auto;
+    font-family: Arial, sans-serif;
+}
+
+.video-thumbnail {
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.video-thumbnail img {
+    width: 100%;
+    display: block;
+}
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+    color: white;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.play-button:hover {
+    color: black;
+}
+
+.video-quote {
+    font-style: italic;
+    font-size: 16px;
+    color: #333;
+    margin: 0.5rem 0;
+}
+
+.video-caption {
+    font-size: 12px;
+    color: #aaa;
+    letter-spacing: 0.5px;
+}
+
+.video-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+}
+
+.video-popup-content {
+    position: relative;
+    width: 80%;
+    max-width: 800px;
+    aspect-ratio: 16/9;
+    background-color: #000;
+}
+
+.video-close {
+    position: absolute;
+    top: -30px;
+    right: 0;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+/* ---------------------Hop tac----------------------- */
+
+.hoptac {
+    padding-top: 100px;
+    width: 99%;
+    background-color: #f5f2f2;
+}
+
+.carousel-hoptac img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin: 0 auto;
+}
+
+.carousel-hoptac .slick-slide {
+    padding: 0 10px;
+}
+
+/* Container for the logo section */
+.hoptac-icon {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.hoptac-item {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    align-items: center;
+    gap: 10px;
+}
+
+.hoptac-item li {
+    flex-basis: calc((100% / 6) - 10px);
+    max-width: calc((100% / 6) - 10px);
+    height: 70px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #e0e0e0;
+    position: relative;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.hoptac-item li a {
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+
+}
+
+.hoptac-item li img {
+    max-height: 23px;
+    width: auto;
+    display: block;
+    object-fit: contain;
+}
+
+
+.hoptac-item li:before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    right: -1px;
+    bottom: -1px;
+    border: 1px solid transparent !important;
+    transition: 0.4s ease;
+    z-index: 1;
+}
+
+.hoptac-item li:hover {
+    border-color: #e0e0e0;
+}
+
+.hoptac-item li:hover:before {
+    border-color: #e54430 !important;
+}
+
+@media (min-width: 1200px) {
+    .hoptac-item li {
+        flex-basis: calc((100% / 6) - 10px);
+        max-width: calc((100% / 6) - 10px);
+    }
+}
+
+@media (max-width: 1199.98px) {
+    .hoptac-item li {
+        flex-basis: calc((100% / 5) - 10px);
+        max-width: calc((100% / 5) - 10px);
+    }
+}
+
+@media (max-width: 991.98px) {
+    .hoptac-item li {
+        flex-basis: calc((100% / 4) - 10px);
+        max-width: calc((100% / 4) - 10px);
+    }
+
+    .hoptac-item li img {
+        max-height: 20px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .hoptac-item li {
+        flex-basis: calc((100% / 3) - 10px);
+        max-width: calc((100% / 3) - 10px);
+    }
+
+    .hoptac-item li img {
+        max-height: 18px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .hoptac-item li {
+        flex-basis: calc((100% / 2) - 10px);
+        max-width: calc((100% / 2) - 10px);
+    }
+
+    .hoptac-item li img {
+        max-height: 16px;
+    }
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+
+
+/* ------------------------------- */
+.footer {
+    background-color: #ededed;
+    /* Grey background matching the image */
+    padding: 40px 0 20px 0;
+    /* Top/bottom padding */
+    color: #333;
+    /* Default text color */
+    font-size: 0.9em;
+    /* Slightly smaller font size */
+}
+
+.footer-logo {
+    width: 40px;
+    /* Adjust as needed */
+    height: auto;
+    margin-right: 20px;
+    /* Space between logo and text */
+    vertical-align: top;
+    /* Align with the top of the text */
+}
+
+.footer-content-left {
+    line-height: 1.6;
+}
+
+.footer-heading {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #555;
+    font-size: 1em;
+}
+
+.footer-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-list li {
+    margin-bottom: 5px;
+}
+
+.footer-list a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-list a:hover {
+    color: #e54430;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.social-icons a {
+    text-decoration: none;
+    color: #2b2a2a;
+}
+
+.social-icon-wrapper {
+    width: 35px;
+    height: 35px;
+    background-color: #d0d0d0;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.social-icon-wrapper:hover {
+    background-color: #b0b0b0;
+    /* Darker on hover */
+}
+
+.social-icon {
+    color: #555;
+    /* Icon color */
+    font-size: 1.2em;
+    /* Icon size */
+}
+
+.social-icon:hover {
+    color: #25351a;
+}
+
+
+.footer-bottom-text {
+    font-size: 0.8em;
+    color: #666;
+    margin-top: 30px;
+}
+
+.footer-bottom-text strong {
+    color: #444;
+}
+
+.lien-he {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.icon-lienhe img {
+    width: 60px;
+    height: 60px;
+    padding: 5px;
+    border-radius: 50%;
+    background-color: transparent;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover đẹp */
+.icon-lienhe img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
